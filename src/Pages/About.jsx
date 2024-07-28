@@ -27,7 +27,7 @@ const About = () => {
           <h3 className='text-[#AEADF9]'>Education:</h3>
           <p className="mb-4 text-base sm:text-sm md:text-base lg:text-lg overflow-wrap break-word">
             Bachelor: Software Engineering @ NHL Stenden University
-            Of Applied Science 2021-2025
+            Of Applied Science.
           </p>
           <h3 className='text-[#AEADF9]'>Certification:</h3>
           <p className="mb-4 text-base sm:text-sm md:text-base lg:text-lg overflow-wrap break-word">

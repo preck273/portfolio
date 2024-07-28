@@ -20,7 +20,9 @@ const About = () => {
             passionate about creating beautiful and functional websites
             and eager to enhance my skills through practical experience. 
             My journey in the tech world is driven by a love for solving
-            complex problems and a commitment to continuous learning.
+            complex problems and a commitment to continuous learning. Additionally,
+            I am an ethical hacker and a cybersecurity enthusiast, which complements
+            my web development skills and deepens my understanding of security practices in the tech industry.
           </p>
           <h3 className='text-[#AEADF9]'>Education:</h3>
           <p className="mb-4 text-base sm:text-sm md:text-base lg:text-lg overflow-wrap break-word">

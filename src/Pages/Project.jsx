@@ -45,7 +45,7 @@ const projects = [
     description: 'This is a figma design of my portfolio, showcasing my design skill, there is still room for improvement of course.',
     imageUrl: design,
     websiteUrl: 'https://www.figma.com/design/FyfhIu0gfvslYqpBePCACA/Untitled?node-id=15-212&t=9EcHtPdKUHQ78YW1-0',
-    githubUrl: 'https://github.com/preck273/TravelGuide'
+    githubUrl: 'https://github.com/preck273/portfolio'
   },
   // Add more projects as needed
 ];

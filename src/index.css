@@ -24,3 +24,23 @@ span{
 .purple{
     color: #AEADF9; 
 }
+
+.transition {
+  transition: all 1s ease-in;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 100;
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+.translate-y-20 {
+  transform: translateY(20px);
+}

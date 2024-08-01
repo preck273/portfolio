@@ -1,16 +1,38 @@
-import React from 'react';
-import me from '../assets/me.png';
+import React, { useState, useEffect } from 'react';
+import web from '../assets/web.jpg';
+import api from '../assets/api.jpeg';
+import fig from '../assets/fig.jpg';
+import db from '../assets/DB.jpg';
+
+
 
 const About = () => {
+  const [currentImage, setCurrentImage] = useState(web);
+  const [position, setPosition] = useState(0);
+
+  useEffect(() => {
+    const images = [web, api, fig, db];
+    let currentIndex = 0;
+
+    const intervalId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      setCurrentImage(images[currentIndex]);
+      setPosition((prevPosition) => (prevPosition === 0 ? 100 : 0)); // Move image to right then back to left
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(intervalId); // Clear interval on component unmount
+  }, []);
+
   return (
     <div className='mt-20'>
       <h2 className="text-2xl font-semibold text-center text-[#AEADF9]">About Me</h2>
-      <section className="flex flex-col md:flex-row items-start p-5 text-gray-300"> {/* Applied background color */}
+      <section className="flex flex-col md:flex-row items-start p-5 text-gray-300">
         <div className="md:w-1/2 p-4 flex justify-center items-center">
           <img 
-            src={me} 
+            src={currentImage} 
             alt="Code illustration" 
-            className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-112 xl:h-112 rounded-full object-cover shadow-lg border-4 border-[#2F4F6F]" // Border color updated
+            className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-112 xl:h-112 shadow-lg border-4 border-[#2F4F6F] transition-transform duration-1000"
+            style={{ transform: `translateX(${position}px)` }}
           />
         </div>
         <div className="md:w-1/2 p-4">
